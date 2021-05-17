@@ -1,0 +1,7 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+DroneHat,item_modifiers,mod,,,Drone Hat Mod,,,,,
+DroneHatDesc,item_modifiers,mod,,,"God Mode flying 'cosmetic' for Server Admin to provide a context."
+
+ParachuteHat,item_modifiers,mod,,,Parachute Hat Mod,,,,,
+ParachuteHatDesc,item_modifiers,mod,,,"Allows players to drop without damage. Based on TFP 'Oh Shitz Drops' candy buff. You can equip this mod while in a vehicle or freefalling in case you intentially or accidentally need to use it."

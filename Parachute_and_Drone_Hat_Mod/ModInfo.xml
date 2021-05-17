@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Parachute and Drone Hat Mod" />
+		<Description value="Parachute hat mod allows players to drop without damage and the drone hat mod is good for Admin in God Mode." />
+		<Author value="arramus (based on Oakraven's Headware Mods built into Snufkin Weapons Xpansion)" />
+		<Version value="A19" />
+		<Website value="" />
+	</ModInfo>
+</xml>

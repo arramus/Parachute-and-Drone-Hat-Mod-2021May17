@@ -1,0 +1,59 @@
+<tipsy>	
+
+	<append xpath="/item_modifiers">
+		
+		<item_modifier name="ParachuteHat" installable_tags="head" modifier_tags="dye" blocked_tags="noMods,clothing" type="attachment">
+		<property name="CustomIcon" value="flamethrowerTrap"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="DescriptionKey" value="ParachuteHatDesc"/>	
+			<property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="#Other/Items?Misc/parachute_supplies" parent_transform="Head" local_offset="-0.75,0,0" local_rotation="0,0,90">
+					<requirement name="!IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStart" action="RemovePrefabFromEntity" prefab="#Other/Items?Misc/parachute_supplies">
+					<requirement name="IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="#Other/Items?Misc/parachute_supplies"/>
+			</effect_group> <!-- Unnessesary for God Mod but some attritubes are required to launch-->
+			
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDrugOhShitzDrops"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$buffDrugOhShitzDropsDuration" operation="add" value="60"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$buffDrugOhShitzDropsDuration" operation="set" value="60">
+				<requirement name="CVarCompare" cvar="$buffDrugOhShitzDropsDuration" operation="GT" value="60"/></triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDrugOhShitzDrops"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="DroneHat" installable_tags="head" modifier_tags="dye" blocked_tags="noMods,clothing" type="attachment">
+		<property name="CustomIcon" value="gunBotT3JunkDrone"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="DescriptionKey" value="DroneHatDesc"/>		
+			<property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Junk Drone/junkDrone_Prefab" parent_transform="Head" local_offset="-0.75,0,0" local_rotation="0,0,90">
+					<requirement name="!IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStart" action="RemovePrefabFromEntity" prefab="#Other/Items?Weapons/Ranged/Junk Drone/junkDrone_Prefab">
+					<requirement name="IsFPV"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="#Other/Items?Weapons/Ranged/Junk Drone/junkDrone_Prefab"/>
+			</effect_group> <!-- Unnessesary for God Mod but some attritubes are required to launch-->
+			<effect_group tiered="false">
+			<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="10.5,13.2"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="1" tags="heat,electrical"/>
+			<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+			<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+		</effect_group>
+		</item_modifier>		
+		
+	</append>
+</tipsy>

@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="ParachuteHat" count="1" craft_area="workbench" craft_time="240">
+		<ingredient name="resourceLeather" count="5"/>
+		<ingredient name="resourceDuctTape" count="5"/>
+		<ingredient name="resourceCloth" count="100"/>
+		<ingredient name="resourceSewingKit" count="5"/>
+		<ingredient name="drugOhShitzDrops" count="5"/>
+		</recipe>
+	</append>
+</configs>
